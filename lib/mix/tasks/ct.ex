@@ -11,6 +11,8 @@ defmodule Mix.Tasks.Ct do
 
   """
 
+  @recursive true
+
   def run(args) do
     {opts, args, rem_opts} = OptionParser.parse(args, strict: [log_dir: :string])
     new_args = args ++ MixErlangTasks.Util.filter_opts(rem_opts)
